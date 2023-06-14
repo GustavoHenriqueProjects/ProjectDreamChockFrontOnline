@@ -17,7 +17,6 @@ let statusPayment = false
 const loadAutomationPage = async function () {
   const idUser = Number(id_data_personal);
   const dataUser = await automationData(idUser);
-  console.log(dataUser)
   if (dataUser.message.data_payment.nome != '') {
     numeroCartao.value = dataUser.message.data_payment.numero_cartao
     nomeTitularCartao.value = dataUser.message.data_payment.nome
@@ -78,17 +77,14 @@ const loadAutomationPage = async function () {
 
     mes.addEventListener('change', function (event) {
       mesCartao = mes.value;
-      console.log(mesCartao);
     });
 
     ano.addEventListener('change', function (event) {
       anoCartao = ano.value;
-      console.log(anoCartao);
     });
 
     cvv.addEventListener('input', function (event) {
       cvvCartao = cvv.value;
-      console.log(cvvCartao);
     });
 
     submit.addEventListener('click', function () {
