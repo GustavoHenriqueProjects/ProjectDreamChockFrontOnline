@@ -1,7 +1,7 @@
 'use strict'
 
 export const salveDataCard = async (cadastro) => {
-    const url = 'http://Localhost:8080/v1/dream-chock/api/personal-data-payment/user';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/personal-data-payment/user';
   
     const cadastroCard = {
       method: 'POST',

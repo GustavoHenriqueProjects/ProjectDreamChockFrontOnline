@@ -1,7 +1,7 @@
 'use strict'
 
 export const salveDataDonation= async (cadastro) => {
-    const url = 'http://Localhost:8080/v1/dream-chock/api/register-donation/user';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/register-donation/user';
   
     const dataDonation = {
       method: 'POST',
