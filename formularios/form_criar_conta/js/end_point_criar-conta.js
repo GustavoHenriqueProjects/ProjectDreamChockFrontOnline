@@ -16,7 +16,7 @@
 
 
 export const criarConta = async (cadastro) => {
-    const url = 'http://localhost:8080/v1/dream-chock/api/create-account/user';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/create-account/user';
   
     const cadastroUsuario = {
       method: 'POST',

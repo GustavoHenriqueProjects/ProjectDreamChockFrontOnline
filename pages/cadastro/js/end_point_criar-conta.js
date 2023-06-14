@@ -16,7 +16,7 @@
 
 
 export const criarContaFuncionario = async (cadastro) => {
-    const url = 'http://Localhost:8080/v1/dream-chock/api/create-account/employee';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/create-account/employee';
   
     const cadastroUsuario = {
       method: 'POST',

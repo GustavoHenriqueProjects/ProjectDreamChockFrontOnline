@@ -1,7 +1,7 @@
 'use strict'
 
 export const verificarConta = async (cadastro) => {
-    const url = 'http://Localhost:8080/v1/dream-chock/api/verify-account/user';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/verify-account/user';
   
     const mandarCadastro = {
       method: 'POST',

@@ -1,5 +1,5 @@
 export const salvarDados = async (cadastro) => {
-    const url = 'http://Localhost:8080/v1/dream-chock/api/personal-data/user';
+    const url = 'https://dreamchock-backend.onrender.com/v1/dream-chock/api/personal-data/user';
   
     const dadosUsuario = {
       method: 'POST',
