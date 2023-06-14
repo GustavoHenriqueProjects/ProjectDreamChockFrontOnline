@@ -82,7 +82,7 @@ const automationPage = async (id) => {
         setTimeout(() => {
           mensagemSucesso.remove();
           location.reload()
-        }, 4000);
+        }, 3000);
         
       } else {
         const mensagemErro = document.createElement('p');

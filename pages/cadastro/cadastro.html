@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="/pages/cadastro/css/tablet.css">
     <script src="/pages/cadastro/js/rotas.js" defer></script>
     <script src="./js/script.js" defer type="module"></script>
+    <script src="./js/funcionarios.js" defer type="module"></script>
+    <link rel="icon" href="/img/icon.png">
+
 
     <!-- excluir -->
     <link rel="stylesheet" href="/pages/cadastro/css/excluir.css">
@@ -22,7 +25,7 @@
     <link rel="stylesheet" href="/pages/cadastro/css/criar.css">
     <!-- Doador -->
 
-    <title>Lista de Funcionários</title>
+    <title>Global Warming</title>
 </head>
 
 <body>
@@ -57,77 +60,11 @@
 
     <main>
 
-          <div style="display: none;" class="box-doador">
-
-            <div class="box-header-doador">
-                <p>Nome</p>
-                <p>Email</p>
-                <p>Valor</p>
-            </div>
-         
-            <div class="box-main-doador">
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-                <div class="doador">
-                    <div class="informacoes">
-                        <p>Guilherme</p>
-                        <p>Guilherme@gmail.com</p>
-                        <p>R$: 55,00</p>
-                    </div>
-                    <div class="linha"></div>
-                </div>
-
-            </div>
-        </div>
-
+        
         <div class="box">
 
             <div class="box-header" id="div-menu">
-                <!-- <a href="#" id="opcao3" onclick="mostrarDiv(3)">Lista de Funcionários</a> -->
+                <a href="#" id="opcao3" onclick="mostrarDiv(3)">Lista de Funcionários</a>
                 <a href="#" id="opcao2" onclick="mostrarDiv(2)">Novo Cadastro</a>
                 <a href="#" id="opcao1" onclick="mostrarDiv(1)">Excluir Cadastro</a>
               </div>              
@@ -153,16 +90,16 @@
                             <small>Mensagem de erro</small>
                         </div>
 
-                        <div class="form-control-excluir-funcionario">
+                        <!-- <div class="form-control-excluir-funcionario">
                             <label for="password">Senha</label>
                             <input type="password" id="password-excluir" placeholder="Digite a senha do funcionário" />
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro</small>
-                        </div>
+                        </div> -->
 
                         <div class="form-image-excluir-funcionario">
-                            <button id="button-excluir" type="click">Excluir</button>
+                            <button id="button-excluir" type="button">Excluir</button>
                         </div>
                     </form>
                 </div>
@@ -172,7 +109,7 @@
                     <form id="form-criar" class="form validate-form">
                         <div class="form-control-criar-funcionario">
                             <label for="username">Nome</label>
-                            <input type="text" id="username-criar" placeholder="Digite o nome do funcionário" />
+                            <input type="text" id="username-criar" placeholder="Digite o nome do funcionário" maxlength="30"/>
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small id="error-message-criar">Mensagem de erro</small>
@@ -197,7 +134,7 @@
                         <div class="form-image-criar-funcionario">
                             <img src="/img/funcionario.png" alt="">
                             <input type="text" id="cria-url-foto" placeholder="Digite a URL da foto" />
-                            <button id="button-criar" type="submit">Cadastrar</button>
+                            <button id="button-criar" type="button">Cadastrar</button>
                         </div>
 
 
@@ -205,8 +142,8 @@
 
                 </div>
 
-                <!-- Lista de Funcionario -->
-                <div class="container-funcionario div-menu" id="div3">
+                 <!-- Lista de Funcionario -->
+                 <div class="container-funcionario div-menu" id="div3">
 
                     <div class="box-descricao">
                         <p>Nome</p>
@@ -215,7 +152,7 @@
 
                     <div class="box-funcionario">
 
-                        <div class="funcionario">
+                        <!-- <div class="funcionario">
                             <div class="informacoes">
                                 <p>Guilherme</p>
                                 <p>Guilherme@gmail.com</p>
@@ -230,49 +167,9 @@
                                 <p>Guilherme@gmail.com</p>
                             </div>
                             <div class="linha"></div>
-                        </div>
-
-
-                        <div class="funcionario">
-                            <div class="informacoes">
-                                <p>Guilherme</p>
-                                <p>Guilherme@gmail.com</p>
-                            </div>
-                            <div class="linha"></div>
-                        </div>
-                        <div class="funcionario">
-                            <div class="informacoes">
-                                <p>Guilherme</p>
-                                <p>Guilherme@gmail.com</p>
-                            </div>
-                            <div class="linha"></div>
-                        </div>
-                        <div class="funcionario">
-                            <div class="informacoes">
-                                <p>Guilherme</p>
-                                <p>Guilherme@gmail.com</p>
-                            </div>
-                            <div class="linha"></div>
-                        </div>
-                        <div class="funcionario">
-                            <div class="informacoes">
-                                <p>Guilherme</p>
-                                <p>Guilherme@gmail.com</p>
-                            </div>
-                            <div class="linha"></div>
-                        </div>
-                        <div class="funcionario">
-                            <div class="informacoes">
-                                <p>Guilherme</p>
-                                <p>Guilherme@gmail.com</p>
-                            </div>
-                            <div class="linha"></div>
-                        </div>
+                        </div> -->
 
                     </div>
-
-                </div>
-
 
             </div>
 

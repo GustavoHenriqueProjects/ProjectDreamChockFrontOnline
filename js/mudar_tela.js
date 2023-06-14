@@ -15,6 +15,9 @@ selectLogin.addEventListener('change', function () {
     if (url) {
         // Abrir a URL em uma nova janela ou guia
         window.open(url, '_blank');
+        // Retorna para a primeira opção (Login)
+        this.selectedIndex = 0;
+
     }
 });
 
