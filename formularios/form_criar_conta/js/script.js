@@ -16,6 +16,14 @@ const usuario = async (dadosJson) => {
   const statusDaConta = await criarConta(dadosJson)
   if(statusDaConta.status == 201){
     window.location.href = "../../formularios/form_entrar_conta/index.html" 
+  } else if (statusDaConta.status == 400) {
+    let mensagemErro = document.createElement('p');
+    mensagemErro.textContent = `Atenção usuário já cadastrado.`;
+    mensagemErro.classList.add('erro');
+    document.body.appendChild(mensagemErro);
+    setTimeout(() => {
+      mensagemErro.remove()
+    }, 3000)
   }
 }
 

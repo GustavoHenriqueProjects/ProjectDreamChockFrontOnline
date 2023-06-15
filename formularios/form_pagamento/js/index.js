@@ -24,6 +24,8 @@ const loadAutomationPage = async function () {
     mes.value = dataUser.message.data_payment.mes
     ano.value = dataUser.message.data_payment.ano
     cvv.value = dataUser.message.data_payment.cvv
+    console.log(dataUser.message.data_payment.mes);
+    
 
     // Bloqueia as caixas de texto
     numeroCartao.readOnly = true;
@@ -44,7 +46,7 @@ const loadAutomationPage = async function () {
         setTimeout(() => {
           mensagemSucesso.remove();
           location.reload()
-        }, 5000);
+        }, 3000);
       } else {
         let mensagemErro = document.createElement('p');
         mensagemErro.textContent = `Atenção ${nomeTitularCartao.value} verifique as informações e tente novamente.`;
@@ -52,7 +54,7 @@ const loadAutomationPage = async function () {
         document.body.appendChild(mensagemErro);
         setTimeout(() => {
           mensagemErro.remove()
-        }, 5000)
+        }, 3000)
       }
     }
     const submit = document.querySelector('#submitButton');
@@ -92,16 +94,25 @@ const loadAutomationPage = async function () {
     });
 
     submit.addEventListener('click', function () {
-
-      let dadosJson = {
-        number_card: numeroCartaoAtual,
-        name_user: nomeTitular,
-        month: Number(mesCartao),
-        year: Number(anoCartao),
-        cvv: cvvCartao,
-        id_data_personal: Number(id_data_personal)
+      if (numeroCartao.value.length < 16) {
+    let mensagemErro = document.createElement('p');
+    mensagemErro.textContent = `Atenção o número do cartão deve ter 16 digitos.`;
+    mensagemErro.classList.add('erro');
+    document.body.appendChild(mensagemErro);
+    setTimeout(() => {
+      mensagemErro.remove()
+    }, 2000)
+      } else {
+        let dadosJson = {
+          number_card: numeroCartaoAtual,
+          name_user: nomeTitular,
+          month: Number(mesCartao),
+          year: Number(anoCartao),
+          cvv: cvvCartao,
+          id_data_personal: Number(id_data_personal)
+        }
+        setDataCardUser(dadosJson)
       }
-      setDataCardUser(dadosJson)
     })
   }
 }
@@ -116,7 +127,7 @@ const setDataDonation = async function (dadosJson) {
     document.body.appendChild(mensagemSucesso);
     setTimeout(() => {
       mensagemSucesso.remove();
-    }, 4000); // Remover a mensagem após 3 segundos (3000 milissegundos)
+    }, 3000); // Remover a mensagem após 3 segundos (3000 milissegundos)
   } else {
     let mensagemErro = document.createElement('p');
     mensagemErro.textContent = `Atenção ${nomeTitularCartao.value} verifique as informações e tente novamente.`;
@@ -124,7 +135,7 @@ const setDataDonation = async function (dadosJson) {
     document.body.appendChild(mensagemErro);
     setTimeout(() => {
       mensagemErro.remove()
-    }, 5000)
+    }, 3000)
   }
 }
 

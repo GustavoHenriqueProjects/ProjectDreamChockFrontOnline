@@ -85,4 +85,18 @@
         font-size: 1.7rem;
     }
 
+    .menu a{
+        position: relative;
+        animation-name: animation;
+        animation-duration: 2s;
+        scroll-behavior: smooth;
+    
+    }
+    
+    @keyframes animation{
+        0%{right: 0px;}
+        100%{right: 200px;}
+    }
+    
+
 }
